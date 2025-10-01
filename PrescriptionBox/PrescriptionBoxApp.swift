@@ -11,7 +11,8 @@ import SwiftUI
 struct PrescriptionBoxApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let userSettings = UserSettings()
+            ContentView().environmentObject(userSettings)
         }
     }
 }

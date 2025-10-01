@@ -1,9 +1,13 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var userSettings: UserSettings
     var body: some View {
         NavigationStack {
             Form {
+                TextField("Username", text: $userSettings.username)
+                TextField("Enter Your API Key", text: $userSettings.cred)
+
                 Section("API Configuration") {
                     Text("Placeholder for API Config")
                         .foregroundColor(.secondary)
@@ -27,3 +31,4 @@ struct SettingsView: View {
         }
     }
 }
+
